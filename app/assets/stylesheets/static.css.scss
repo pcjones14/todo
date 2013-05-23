@@ -1,0 +1,34 @@
+// Place all the styles related to the Static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'bootstrap';
+@import 'bootstrap-responsive';
+
+.container {
+  padding: 20px 50px;
+  background-color: white;
+}
+
+body {
+  background-image: image-url("bit-tile-blue.gif");
+}
+
+.no-pads, .nav {
+  margin: 0;
+  padding: 0;
+}
+
+.center-column {
+  text-align: center;
+}
+
+.center-column p {
+  text-align: justify;
+}
+
+.footer {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: #EEE;
+}
