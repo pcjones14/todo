@@ -6,17 +6,15 @@
 @import 'bootstrap-responsive';
 
 .container {
-  padding: 20px 50px;
   background-color: white;
+}
+
+.content {
+  padding: 30px 50px;
 }
 
 body {
   background-image: image-url("bit-tile-blue.gif");
-}
-
-.no-pads, .nav {
-  margin: 0;
-  padding: 0;
 }
 
 .center-column {
@@ -27,8 +25,60 @@ body {
   text-align: justify;
 }
 
-.footer {
-  margin-top: 10px;
-  padding: 20px;
+.hero-unit h2 {
+  font-size: 60px;
+  line-height: 1;
+}
+
+.hero-unit p {
+  font-size: 20px;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.footer p {
+  text-align: center;
   background-color: #EEE;
+  margin: 25px 40px;
+  padding: 30px 50px;
+}
+
+// drop shadow
+
+header {
+  padding: 20px 50px 0;
+  box-shadow: 0 4px 20px #AAA;
+}
+
+.footer {
+  box-shadow: 0 -4px 20px #AAA;
+}
+
+// login page stuff
+
+.login-form-container {
+  background-color: #EEE;
+  border-radius: 5px;
+  border: 3px solid #CCC;
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px 50px;
+}
+
+form .input-padding {
+  padding: 15px;
+  width: 300px;
+}
+
+// general classes
+
+.no-pads, .nav, .body {
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  text-align: center;
 }

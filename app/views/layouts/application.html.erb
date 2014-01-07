@@ -4,29 +4,36 @@
 
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title>Bootstrap 101 Template</title>
+    <title>Todo 2.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
+
   <body>
     <div class="container">
-      <h1 class="pull-left no-pads"><a href="#">Todo 2.0</a></h1>
-      <ul class="nav nav-pills pull-right">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Sign Up</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
-      <div style="clear:both;">&nbsp;</div>
+      <header>
+        <h1 class="pull-left no-pads title"><%= link_to("Todo 2.0", root_path) %></h1>
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li <%= "class=active" if yield(:selected) == "home" %>><%= link_to("Home", root_path) %></li>
+            <li <%= "class=active" if yield(:selected) == "register" %>><%= link_to("Register", static_register_path) %></li>
+            <li <%= "class=active" if yield(:selected) == "login" %>><%= link_to("Login", static_login_path) %></li>
+          </ul>
+        </nav>
+        <div style="clear:both;">&nbsp;</div>
+      </header>
       <div class="content">
         <%= yield %>
-      </div> <!-- /content -->
-      <div>
-        <p class="footer">Copyright &copy;2013 Payton Carter. All Rights Reserved.</p>
       </div>
-    </div> <!-- /container -->
+      <div class="row-fluid footer">
+        <p>Copyright &copy;<%= Time.now.year %> Payton Carter. All Rights Reserved.</p>
+      </div>
+    </div>
     <script src="http://code.jquery.com/jquery.js"></script>
   </body>
+
 </html>

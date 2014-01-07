@@ -11,6 +11,20 @@ end
 
 module Todo
   class Application < Rails::Application
+
+    # Mailgun config stuff
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.smtp_settings = {
+         :authentication => :plain,
+         :address => "smtp.mailgun.org",
+         :port => 587,
+         :domain => "sandbox73116.mailgun.org",
+         :user_name => "postmaster@sandbox73116.mailgun.org",
+         :password => "34npcaskda74"
+    }
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

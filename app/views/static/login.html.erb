@@ -1,0 +1,27 @@
+<%= content_for(:selected, "login") %>
+
+<div class="center">
+	<h2>Login</h2>
+	<p>Welcome back!</p>
+</div>
+
+<div class="login-form-container" >
+	<%= form_tag do %>
+		<!-- <div class="alert alert-error">
+			Your email or password did not match. Try again.
+		</div> -->
+		<p>
+			<%= label_tag(:email, "Email: ") %>
+			<%= text_field_tag(:email, nil, class: "input-padding") %>
+		</p>
+		<p>
+			<%= label_tag(:password, "Password: ") %>
+			<%= password_field_tag(:password, nil, class: "input-padding") %>
+		</p>
+		<p>
+			<%= check_box_tag(:remember) %>&nbsp;&nbsp;Remember me?
+		<p>
+			<%= submit_tag("Sign in", class: "btn") %>
+		</p>
+	<% end %>
+</div>

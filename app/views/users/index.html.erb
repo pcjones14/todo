@@ -1,0 +1,7 @@
+<h2>Listing all users</h2>
+<table border="1">
+	<tr><th>Email</th><th>Name</th></tr>
+	<% @users.each do |user| %>
+		<tr><td><%= user.email %></td><td><%= user.name %></td></tr>
+	<% end %>
+</table>

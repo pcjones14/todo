@@ -1,17 +1,19 @@
-<div class="hero-unit visible-desktop">
+<% content_for(:selected, "home") %>
+
+<div class="hero-unit">
   <div class="row-fluid">
     <div class="span8">
-      <h1>The todo list... redefined.</h1>
+      <h2>The todo list... redefined.</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar consequat enim, vitae viverra sapien sodales vel. Duis varius ligula elit, vel placerat dolor. Vestibulum augue sapien, vestibulum a facilisis quis, egestas et elit. Etiam vulputate mi in augue bibendum sed ultricies ligula euismod. Praesent rutrum est augue, viverra mattis velit.</p>
-      <div class="btn btn-primary btn-large">Sign up</div>
+      <%= link_to("<div class=\"btn btn-primary btn-large\">Sign up</div>".html_safe, static_register_path) %>
     </div>
     <div class="span4">
-      <p><%= image_tag("logo-400.png") %></p>
+      <p class="hidden-phone"><%= image_tag("logo-400.png") %></p>
     </div>
   </div>
 </div>
 
-<div class="row">
+<div class="row-fluid">
 
   <div class="span4 center-column">
     <%= image_tag("whale.jpg", {class: "img-circle"}) %>
@@ -30,3 +32,4 @@
     <h2>Accessible to all</h2>
     <p>Praesent tellus nibh, commodo non accumsan posuere, dictum mattis dolor. In quis lectus tellus. Ut sollicitudin nisl nec nisl condimentum vel tempus dui consectetur. Donec lectus leo, accumsan ac tincidunt at, tincidunt et libero. Integer placerat arcu non turpis vehicula consequat ut at nisi. Integer mollis aliquam augue, eget placerat mi consequat nec. Nulla condimentum condimentum tortor at mattis. Mauris gravida vulputate orci vel feugiat. Vivamus pharetra egestas velit, a mattis risus scelerisque sit amet. Nam commodo augue quam, sit.</p>
   </div>
+</div>

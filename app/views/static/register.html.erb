@@ -1,2 +1,28 @@
-<h1>Static#register</h1>
-<p>Find me in app/views/static/register.html.erb</p>
+<%= content_for(:selected, "register") %>
+
+<div class="center">
+	<h2>Thanks for joining us!</h2>
+	<p>We just need a little bit of information before we get started...</p>
+</div>
+
+<%= form_for(@user, html: {class: "login-form-container"}) do |f| %>
+	<p>
+		<%= f.label(:email, "Email: ") %>
+		<%= f.text_field(:email, class: "input-padding") %>
+	</p>
+	<p>
+		<%= f.label(:name, "Name: ") %>
+		<%= f.text_field(:name, class: "input-padding") %>
+	</p>
+	<p>
+		<%= f.label(:password, "Password: ") %>
+		<%= f.password_field(:password, class: "input-padding") %>
+	</p>
+	<p>
+		<%= f.label(:verify, "Verify password: ") %>
+		<%= f.password_field(:verify, class: "input-padding") %>
+	</p>
+	<p>
+		<%= f.submit("Sign up!") %>
+	</p>
+<% end %>
