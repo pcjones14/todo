@@ -2,10 +2,15 @@
 
 <div class="center">
 	<h2>Thanks for joining us!</h2>
-	<p>We just need a little bit of information before we get started...</p>
+	<p>We just need a little bit of information before we get started.</p>
 </div>
 
 <%= form_for(@user, html: {class: "login-form-container"}) do |f| %>
+
+	<%= "<div class=\"alert alert-error alert-block\">#{flash['error']}</div>".html_safe if !flash['error'].blank? %>
+
+	<p style="font-size:10px;"><i><sup>*</sup> All fields are required</i></p>
+
 	<p>
 		<%= f.label(:email, "Email: ") %>
 		<%= f.text_field(:email, class: "input-padding") %>
@@ -19,8 +24,8 @@
 		<%= f.password_field(:password, class: "input-padding") %>
 	</p>
 	<p>
-		<%= f.label(:verify, "Verify password: ") %>
-		<%= f.password_field(:verify, class: "input-padding") %>
+		<%= f.label(:password_confirmation, "Verify password: ") %>
+		<%= f.password_field(:password_confirmation, class: "input-padding") %>
 	</p>
 	<p>
 		<%= f.submit("Sign up!") %>

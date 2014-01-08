@@ -1,5 +1,8 @@
 <% content_for(:selected, "home") %>
 
+<%= "<div class=\"alert alert-success\">#{flash['success']}</div>".html_safe if !flash['success'].blank? %>
+<%= "<div class=\"alert alert-error\">#{flash['error']}</div>".html_safe if !flash['error'].blank? %>
+
 <div class="hero-unit">
   <div class="row-fluid">
     <div class="span8">

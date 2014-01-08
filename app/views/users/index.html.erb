@@ -1,7 +1,7 @@
 <h2>Listing all users</h2>
 <table border="1">
-	<tr><th>Email</th><th>Name</th></tr>
+	<tr><th>Email</th><th>Name</th><th>Activated</th><th>Activation Key</th></tr>
 	<% @users.each do |user| %>
-		<tr><td><%= user.email %></td><td><%= user.name %></td></tr>
+		<tr><td><%= user.email %></td><td><%= user.name %></td><td><%= user.activated.to_s %></td><td><%= user.activation_key %></td></tr>
 	<% end %>
 </table>

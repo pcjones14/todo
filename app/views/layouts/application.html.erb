@@ -20,8 +20,8 @@
         <nav>
           <ul class="nav nav-pills pull-right">
             <li <%= "class=active" if yield(:selected) == "home" %>><%= link_to("Home", root_path) %></li>
-            <li <%= "class=active" if yield(:selected) == "register" %>><%= link_to("Register", static_register_path) %></li>
-            <li <%= "class=active" if yield(:selected) == "login" %>><%= link_to("Login", static_login_path) %></li>
+            <li <%= "class=active" if yield(:selected) == "register" %>><%= link_to("Register", register_path) %></li>
+            <li <%= "class=active" if yield(:selected) == "login" %>><%= link_to("Login", login_path) %></li>
           </ul>
         </nav>
         <div style="clear:both;">&nbsp;</div>
